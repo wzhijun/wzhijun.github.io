@@ -239,106 +239,14 @@
 </ul>
 <p>我就是这么每天看斗鱼高清直播的（这里原来有个表情 —-）</p>
 <p>按以下教程 免流量上网 很简单</p>
-<h3 id="基本条件"><a href="#基本条件" class="headerlink" title="基本条件"></a>基本条件</h3><ul>
-<li>电脑必须支持ipv6协议栈</li>
-</ul>
-<p>登录 <a href="http://www.kame.net/" target="_blank" rel="external">http://www.kame.net/</a> 首页可看到一只小乌龟，如果您看到乌龟在跳舞，则表明您正在使用IPv6访问互联网。如果您已经确认安装启用了IPv6协议，但依然看不到小乌龟跳舞，说明您所在的IP段不支持IPv6应用。<br>如果不支持，请直接看文末<br><code>关于学校ipv6的一点说明</code></p>
-<blockquote>
-<ul>
-<li>宿舍直接利用端口上网一般都支持ipv6</li>
-<li>实验室直接利用端口上网一般也支持ipv6</li>
-<li>只通过交换机上网的电脑也支持ipv6</li>
-<li>至于路由器：大部分路由器并不支持ipv6，当然也可以把路由器改成交换机模式，至于怎么改请百度！</li>
-</ul>
-</blockquote>
-<h3 id="原理以及配置过程"><a href="#原理以及配置过程" class="headerlink" title="原理以及配置过程"></a>原理以及配置过程</h3><ul>
-<li>详细的原理这里不展开说，后面会更新文章说明！简单的说下要点<ul>
-<li>搭建一台支持ipv6的服务器（DigitalOcean）</li>
-<li>本机与服务器上建立基于ipv6协议栈的通信管道（shadowsocks）</li>
-<li>我们的所有网络请求通过该管道到达服务器，服务器负责转发我们的网络请求</li>
-</ul>
-</li>
-</ul>
-<p>也就是所谓的代理服务器！该过程中由于经过学校计费网关的流量都是ipv6协议栈下的，所以并不会计费！</p>
-<ul>
-<li>支持ipv6的服务器在国内并不普及，而且国内的网络环境，你懂得！楼主使用的是美帝的一个vps运营商DigitalOcean</li>
-</ul>
-<p>具体配置过程：</p>
-<blockquote>
-<ul>
-<li>注册DigitalOcean账号</li>
-<li>购买主机</li>
-<li>配置主机服务端</li>
-<li>使用ShadowSocks客户端完成连接</li>
-</ul>
-</blockquote>
-<p>当然，我知道你并不关心这些！你可以先试试用我的服务器！看下文<br>服务器端的具体配置随后更新</p>
-<hr>
-<h2 id="福利"><a href="#福利" class="headerlink" title="福利"></a>福利</h2><p>咱们先不管服务器的事，你要做的其实很简单！</p>
-<ul>
-<li><p>Step1</p>
-<ul>
-<li><p>下载Chrome浏览器（下载其中一个）<br>64bit 链接：<a href="http://pan.baidu.com/s/1hq6EorM" target="_blank" rel="external">http://pan.baidu.com/s/1hq6EorM</a> 密码：0hko</p>
-<p>32bit 链接：<a href="http://pan.baidu.com/s/1ntDV71R" target="_blank" rel="external">http://pan.baidu.com/s/1ntDV71R</a> 密码：hq6z</p>
-</li>
-</ul>
-</li>
-<li><p>Step2</p>
-<ul>
-<li><p>下载Chrome浏览器插件（代理用）<br>下载地址 <a href="http://pan.baidu.com/s/1i5lh7A9" target="_blank" rel="external">http://pan.baidu.com/s/1i5lh7A9</a></p>
-</li>
-<li><p>下载后先安装chrome，默认安装即可</p>
-</li>
-<li><p>安装chrome之后，点击谷歌浏览器右上角的自定义及控制按钮，在下拉框中选择工具选项，然后点击扩展程序来启动Chrome浏览器的扩展管理器页面，将step2下载的crx文件拖动到该页面即可！不清楚可以<a href="http://chromecj.com/utilities/2014-09/181.html" target="_blank" rel="external">点这里</a><br>如果直接拖动chrome没有反应，<a href="http://chenfeicqq.iteye.com/blog/1570164" target="_blank" rel="external">请点击这里</a></p>
-</li>
-<li><p>此时会有改该插件的guide，我们需要新建一个sock5的127.0.0.1的端口1080的代理<br>这样<img src="/images/proxity.jpg" alt="代理"><br>到此，伟大工程已经完成一半了（原谅我太懒一直没配图）！</p>
-</li>
-</ul>
-</li>
-<li><p>Step3<br>下载shadowsocks，据说该软件开发者已经被喝茶<br><a href="http://pan.baidu.com/s/1pKFNmGF" target="_blank" rel="external">http://pan.baidu.com/s/1pKFNmGF</a></p>
-</li>
-</ul>
-<p><img src="/images/ss1.png" alt="设置1"><br><img src="/images/ss2.png" alt="设置2"><br>按这样设置，注意ipv6地址的矩形括号<br><img src="/images/6.jpg" alt="设置3"></p>
-<p>至此，所有工作都做完了！然后打开ss（也就是小飞机），打开chrome，在刚刚设置的插件（右上角）切换到socks代理模式（也就是刚刚设置的127.0.0.1）试试这个网址       www.YouTube.com</p>
-<h2 id="分享几个账号"><a href="#分享几个账号" class="headerlink" title="分享几个账号"></a>分享几个账号</h2><p>账号内容</p>
-<ul>
-<li>ip地址： [2604:a880:1:20::ec:3001]</li>
-<li>端口：9006</li>
-<li>密码：zhixing9000<br>   忽略引号和冒号<br>   “9006”:”zhixing9000”,<br>   “9007”:”zhixing9000”,<br>   “9008”:”zhixing9000”,<br>   “9009”:”zhixing9000”,</li>
-<li>加密方式：aes-256-cfb</li>
-</ul>
-<p>多人同时使用同一账号会造成比较严重的网络延时，如需其他账号请<a href="http://www.bwcx.wang/about-me/" target="_blank" rel="external">联系博主</a></p>
-<p>不保证长期有效，服务器的租赁费用以及维护是一笔不小的开支，如有意愿分担费用长期合作，还请联系</p>
-<p>文章未完 之后会更新包括vpn、全局代理的相关文章 敬请期待</p>
-<h2 id="其他需要注意的问题"><a href="#其他需要注意的问题" class="headerlink" title="其他需要注意的问题"></a>其他需要注意的问题</h2><ul>
-<li>1 请务必确认您的上网环境支持ipv6</li>
-<li>2 该方法目前只支持chrome上网（火狐也支持）其他软件使用代理的方法稍后更新</li>
-<li>3 使用该方法校内网无法正常浏览（邮箱、pt可以正常浏览 ，如需浏览校内网，请将浏览器插件代理切换到“direct”或者“直接代理”）</li>
-<li>4 使用该方法无需注销校内上网账号</li>
-</ul>
-<h2 id="一些不足"><a href="#一些不足" class="headerlink" title="一些不足"></a>一些不足</h2><ul>
-<li>1 使用此方法上网国内部分网站加载缓慢（部分 如csdn），正常现象</li>
-<li>2 部分网站如网易云音乐、爱奇艺因版权问题部分内容无妨正常浏览</li>
-<li>3 斗鱼、战旗等直播网站不受影响</li>
-</ul>
-<h2 id="附带福利"><a href="#附带福利" class="headerlink" title="附带福利"></a>附带福利</h2><ul>
-<li><p>使用此方法附带科学上网，也就是google、YouTube等可以自由浏览！</p>
-</li>
-<li><p>如果您的环境不支持iPv6，也可以使用该方法科学上网</p>
-<p>请直接下载shadowsocks也就是step3，忽略关于chrome等的步骤</p>
-<p>在配置账号时，注意ip地址一栏填写 159.203.231.161</p>
-<p>其他内容一致，见图设置3，系统代理模式选择pac模式 </p>
-</li>
-<li><p>如有问题请<a href="http://www.bwcx.wang/about-me/" target="_blank" rel="external">联系博主</a></p>
-</li>
-</ul>
-<p>文章未完 之后会更新包括vpn、全局代理的相关文章 敬请期待</p>
-<p>版权声明：此文原创，转载请注明出处</p>
-
       
     </div>
     <footer>
       
+        
+          <div class="alignleft">
+            <a href="/2016/03/24/ipv6/#more" class="more-link">阅读全文</a>
+          </div>
         
         
       
