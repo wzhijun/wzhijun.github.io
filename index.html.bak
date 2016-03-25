@@ -1,0 +1,433 @@
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hexo of wang</title>
+  <meta name="author" content="wangzhijun">
+  
+  <meta name="description" content="Walk steps step by step">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <meta property="og:site_name" content="Hexo of wang"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.ico" rel="icon" type="image/x-ico">
+  <link rel="alternate" href="http://zipperary.com/atom.xml" title="Hexo of wang" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <script src="//libs.baidu.com/jquery/1.8.0/jquery.min.js"></script>
+</head>
+
+
+<body>
+  <header id="header" class="inner">
+<div class="alignleft">
+  <h1><a href="/">Hexo of wang</a></h1>
+  <h2><a href="/">bwcx</a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">首页</a></li>
+    
+      <li><a href="/archives">归档</a></li>
+    
+      <li><a href="/about">关于</a></li>
+    
+      <li><a href="/tools">工具</a></li>
+    
+	<li> <a href="/atom.xml">RSS</a> </li>
+<li> <a title="把这个链接拖到你的Chrome收藏夹工具栏中" href='javascript:(function() {
+	function c() {
+		var e = document.createElement("link");
+		e.setAttribute("type", "text/css");
+		e.setAttribute("rel", "stylesheet");
+		e.setAttribute("href", f);
+		e.setAttribute("class", l);
+		document.body.appendChild(e)
+	}
+ 
+	function h() {
+		var e = document.getElementsByClassName(l);
+		for (var t = 0; t < e.length; t++) {
+			document.body.removeChild(e[t])
+		}
+	}
+ 
+	function p() {
+		var e = document.createElement("div");
+		e.setAttribute("class", a);
+		document.body.appendChild(e);
+		setTimeout(function() {
+			document.body.removeChild(e)
+		}, 100)
+	}
+ 
+	function d(e) {
+		return {
+			height : e.offsetHeight,
+			width : e.offsetWidth
+		}
+	}
+ 
+	function v(i) {
+		var s = d(i);
+		return s.height > e && s.height < n && s.width > t && s.width < r
+	}
+ 
+	function m(e) {
+		var t = e;
+		var n = 0;
+		while (!!t) {
+			n += t.offsetTop;
+			t = t.offsetParent
+		}
+		return n
+	}
+ 
+	function g() {
+		var e = document.documentElement;
+		if (!!window.innerWidth) {
+			return window.innerHeight
+		} else if (e && !isNaN(e.clientHeight)) {
+			return e.clientHeight
+		}
+		return 0
+	}
+ 
+	function y() {
+		if (window.pageYOffset) {
+			return window.pageYOffset
+		}
+		return Math.max(document.documentElement.scrollTop, document.body.scrollTop)
+	}
+ 
+	function E(e) {
+		var t = m(e);
+		return t >= w && t <= b + w
+	}
+ 
+	function S() {
+		var e = document.createElement("audio");
+		e.setAttribute("class", l);
+		e.src = i;
+		e.loop = false;
+		e.addEventListener("canplay", function() {
+			setTimeout(function() {
+				x(k)
+			}, 500);
+			setTimeout(function() {
+				N();
+				p();
+				for (var e = 0; e < O.length; e++) {
+					T(O[e])
+				}
+			}, 15500)
+		}, true);
+		e.addEventListener("ended", function() {
+			N();
+			h()
+		}, true);
+		e.innerHTML = " <p>If you are reading this, it is because your browser does not support the audio element. We recommend that you get a new browser.</p> <p>";
+		document.body.appendChild(e);
+		e.play()
+	}
+ 
+	function x(e) {
+		e.className += " " + s + " " + o
+	}
+ 
+	function T(e) {
+		e.className += " " + s + " " + u[Math.floor(Math.random() * u.length)]
+	}
+ 
+	function N() {
+		var e = document.getElementsByClassName(s);
+		var t = new RegExp("\\b" + s + "\\b");
+		for (var n = 0; n < e.length; ) {
+			e[n].className = e[n].className.replace(t, "")
+		}
+	}
+ 
+	var e = 30;
+	var t = 30;
+	var n = 350;
+	var r = 350;
+	var i = "//s3.amazonaws.com/moovweb-marketing/playground/harlem-shake.mp3";
+	var s = "mw-harlem_shake_me";
+	var o = "im_first";
+	var u = ["im_drunk", "im_baked", "im_trippin", "im_blown"];
+	var a = "mw-strobe_light";
+	var f = "//s3.amazonaws.com/moovweb-marketing/playground/harlem-shake-style.css";
+	var l = "mw_added_css";
+	var b = g();
+	var w = y();
+	var C = document.getElementsByTagName("*");
+	var k = null;
+	for (var L = 0; L < C.length; L++) {
+		var A = C[L];
+		if (v(A)) {
+			if (E(A)) {
+				k = A;
+				break
+			}
+		}
+	}
+	if (A === null) {
+		console.warn("Could not find a node of the right size. Please try a different page.");
+		return
+	}
+	c();
+	S();
+	var O = [];
+	for (var L = 0; L < C.length; L++) {
+		var A = C[L];
+		if (v(A)) {
+			O.push(A)
+		}
+	}
+})()    '>High一下</a> </li>
+
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper">
+  <article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2016-03-24T09:46:32.000Z"><a href="/2016/03/24/ipv6/">2016-03-24</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2016/03/24/ipv6/">ipv6</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h3 id="你的流量还好吗"><a href="#你的流量还好吗" class="headerlink" title="你的流量还好吗"></a>你的流量还好吗</h3><ul>
+<li>校园网限制流量，超过套餐限额4rmb/G,往往看个视频、系统后台自动更新下就好几块没有了好不好（已哭瞎）！</li>
+</ul>
+<h3 id="于是福利来了"><a href="#于是福利来了" class="headerlink" title="于是福利来了"></a>于是福利来了</h3><ul>
+<li>学校网关不限制ipv6流量，也不计费！<br>对，所以PT资源下载不要钱，ipv6电视免费看！<br>所以只用ipv6协议栈通信就可以无限使用流量！</li>
+</ul>
+<p>按以下教程 免流量上网 很简单</p>
+<h3 id="基本条件"><a href="#基本条件" class="headerlink" title="基本条件"></a>基本条件</h3><ul>
+<li>电脑必须支持ipv6协议栈</li>
+</ul>
+<p>登录 <a href="http://www.kame.net/" target="_blank" rel="external">http://www.kame.net/</a> 首页可看到一只小乌龟，如果您看到乌龟在跳舞，则表明您正在使用IPv6访问互联网。如果您已经确认安装启用了IPv6协议，但依然看不到小乌龟跳舞，说明您所在的IP段不支持IPv6应用。<br>如果不支持，那就没必要往下看了！<br><code>关于学校ipv6的一点说明</code></p>
+<blockquote>
+<ul>
+<li>宿舍直接利用端口上网一般都支持ipv6</li>
+<li>实验室直接利用端口上网一般也支持ipv6</li>
+<li>只通过交换机上网的电脑也支持ipv6</li>
+<li>至于路由器：大部分路由器并不支持ipv6，当然也可以把路由器改成交换机模式，至于怎么改请百度！</li>
+</ul>
+</blockquote>
+<h3 id="原理以及配置过程"><a href="#原理以及配置过程" class="headerlink" title="原理以及配置过程"></a>原理以及配置过程</h3><ul>
+<li>详细的原理这里不展开说，后面会更新文章说明！简单的说下要点<ul>
+<li>搭建一台支持ipv6的服务器（DigitalOcean）</li>
+<li>本机与服务器上建立基于ipv6协议栈的通信管道（shadowsocks）</li>
+<li>我们的所有网络请求通过该管道到达服务器，服务器负责转发我们的网络请求</li>
+</ul>
+</li>
+</ul>
+<p>也就是所谓的代理服务器！该过程中由于经过学校计费网关的流量都是ipv6协议栈下的，所以并不会计费！</p>
+<ul>
+<li>支持ipv6的服务器在国内并不普及，而且国内的网络环境，你懂得！楼主使用的是美帝的一个vps运营商DigitalOcean</li>
+</ul>
+<p>具体配置过程：</p>
+<blockquote>
+<ul>
+<li>注册DigitalOcean账号</li>
+<li>购买主机</li>
+<li>配置主机服务端</li>
+<li>使用ShadowSocks客户端完成连接</li>
+</ul>
+</blockquote>
+<p>当然，我知道你并不关心这些！你可以先试试用我的服务器！看下文</p>
+<h2 id="服务器端的具体配置随后更新"><a href="#服务器端的具体配置随后更新" class="headerlink" title="服务器端的具体配置随后更新"></a>服务器端的具体配置随后更新</h2><h2 id="福利"><a href="#福利" class="headerlink" title="福利"></a>福利</h2><p>咱们先不管服务器的事，你要做的其实很简单！</p>
+<ul>
+<li><p>Step1</p>
+<ul>
+<li><p>下载Chrome浏览器（下载其中一个）<br>64bit 链接：<a href="http://pan.baidu.com/s/1hq6EorM" target="_blank" rel="external">http://pan.baidu.com/s/1hq6EorM</a> 密码：0hko</p>
+<p>32bit 链接：<a href="http://pan.baidu.com/s/1ntDV71R" target="_blank" rel="external">http://pan.baidu.com/s/1ntDV71R</a> 密码：hq6z</p>
+</li>
+</ul>
+</li>
+<li><p>Step2</p>
+<ul>
+<li><p>下载Chrome浏览器插件（代理用）<br>下载地址 <a href="http://pan.baidu.com/s/1i5lh7A9" target="_blank" rel="external">http://pan.baidu.com/s/1i5lh7A9</a></p>
+</li>
+<li><p>下载后先安装chrome，默认安装即可</p>
+</li>
+<li><p>安装chrome之后，点击谷歌浏览器右上角的自定义及控制按钮，在下拉框中选择工具选项，然后点击扩展程序来启动Chrome浏览器的扩展管理器页面，将step2下载的crx文件拖动到该页面即可！不清楚可以<a href="http://chromecj.com/utilities/2014-09/181.html" target="_blank" rel="external">点这里</a><br>如果直接拖动chrome没有反应，<a href="http://chenfeicqq.iteye.com/blog/1570164" target="_blank" rel="external">请点击这里</a></p>
+</li>
+<li><p>此时会有改该插件的guide，我们需要新建一个sock5的127.0.0.1的端口1080的代理<br>这样<img src="/images/proxity.jpg" alt="代理"><br>到此，伟大工程已经完成一半了（原谅我太懒一直没配图）！</p>
+</li>
+</ul>
+</li>
+<li><p>Step3<br>下载shadowsocks，据说该软件开发者已经被喝茶<br><a href="http://pan.baidu.com/s/1pKFNmGF" target="_blank" rel="external">http://pan.baidu.com/s/1pKFNmGF</a></p>
+</li>
+</ul>
+<p><img src="/images/ss1.png" alt="设置1"><br><img src="/images/ss2.png" alt="设置2"><br><img src="/images/6.jpg" alt="设置3"></p>
+<p>至此，所有工作都做完了！然后打开ss（也就是小飞机），打来chrome，在刚刚设置的插件（右上角）切换到socks代理模式（也就是刚刚设置的127.0.0.1）试试这个网址       www.YouTube.com</p>
+<h2 id="分享几个账号"><a href="#分享几个账号" class="headerlink" title="分享几个账号"></a>分享几个账号</h2><p>账号内容</p>
+<ul>
+<li>ip地址： [2604:a880:1:20::ec:3001]</li>
+<li>端口：9006</li>
+<li>密码：zhixing9000<br>   忽略引号和冒号<br>   “9006”:”zhixing9000”,<br>   “9007”:”zhixing9000”,<br>   “9008”:”zhixing9000”,<br>   “9009”:”zhixing9000”,</li>
+<li>加密方式：aes-256-cfb</li>
+</ul>
+<p>多人同时使用同一账号会造成比较严重的网络延时，如需其他账号请联系博主</p>
+<p>不保证长期有效，服务器的租赁费用以及维护是一笔不小的开支，如有意愿分担费用长期合作，还请联系</p>
+<p>之后会更新包括vpn、全局代理的相关文章</p>
+<h2 id="其他需要注意的问题"><a href="#其他需要注意的问题" class="headerlink" title="其他需要注意的问题"></a>其他需要注意的问题</h2><ul>
+<li>1 请务必确认您的上网环境支持ipv6</li>
+<li>2 该方法目前只支持chrome上网（火狐也支持）其他软件使用代理的方法稍后更新</li>
+<li>3 使用该方法校内网无法正常浏览（邮箱、pt可以正常浏览 ，如需浏览校内网，请将浏览器插件代理切换到“direct”或者“直接代理”）</li>
+<li>4 使用该方法无需注销校内上网账号</li>
+</ul>
+<h2 id="一些不足"><a href="#一些不足" class="headerlink" title="一些不足"></a>一些不足</h2><ul>
+<li>1 使用此方法上网国内部分网站加载缓慢（部分 如csdn），正常现象</li>
+<li>2 部分网站如网易云音乐、爱奇艺因版权问题部分内容无妨正常浏览</li>
+<li>3 斗鱼、战旗等直播网站不受影响</li>
+</ul>
+<h2 id="附带福利"><a href="#附带福利" class="headerlink" title="附带福利"></a>附带福利</h2><p>使用此方法附带科学上网，也就是google、YouTube等可以自由浏览！</p>
+<p>如果您的环境不支持iPv6，也可以使用该方法科学上网</p>
+<p>请直接下载shadowsocks也就是step3，忽略关于chrome等的步骤</p>
+<p>在配置账号时，注意ip地址一栏填写 159.203.231.161</p>
+<p>其他内容一致，见图设置3，系统代理模式选择pac模式 </p>
+<p>如有问题请联系博主</p>
+<p>版权声明：此文原创，转载请注明出处</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+
+<nav id="pagination">
+  
+  
+  <div class="clearfix"></div>
+</nav></div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="搜索">
+    <input type="hidden" name="q" value="site:6free.bwcx.wang">
+  </form>
+</div>
+
+  
+
+  <div class="widget tag">
+<h3 class="title">INTRO</h3>
+<ul class="entry">
+<li>元神：Latin</li>
+<li>现状：帝都车辆在读研究生</li>
+<li>Email ：wang046218#gmail</li>
+<li><a href="http://www.bwcx.wang/about-me/">About me</a>！</li>
+<li>QQ 号：841623576</li>
+</ul>
+</div>
+
+
+
+  <iframe width="100%" height="550" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=550&fansRow=2&ptype=0&speed=0&skin=3&isTitle=1&noborder=1&isWeibo=1&isFans=1&uid=3081074233&verifier=9c3a3b6c&dpc=1"></iframe>
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><section>
+Theme of Lightum, Improved from Light, by zippera 
+</section>
+<div class="clearfix"></div>
+</footer>
+  <script src="//libs.baidu.com/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</body>
+</html>
+
+
+
