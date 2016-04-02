@@ -236,14 +236,14 @@
 <p>按以下教程 免流量上网 很简单</p>
 <a id="more"></a>
 <h3 id="配置过程"><a href="#配置过程" class="headerlink" title="配置过程"></a>配置过程</h3><ul>
-<li>详细的原理这里不展开说，后面会更新文章说明！简单的说下要点<ul>
 <li>搭建一台支持ipv6的服务器（DigitalOcean）</li>
 <li>设置代理服务（shadowsocks）</li>
 <li>设置本地客户端</li>
 </ul>
-</li>
-</ul>
-<p>当然，过程还是比较复杂的！<br>仅为了测试效果，你可以先试试用我的服务器的端口！<br>仅仅设置本地客户端！（shadowsocks本地设置）</p>
+<p>当然，过程还是比较复杂的！（包括注册paypal、Do账号等等，学习成本大概是半天）</p>
+<p>有兴趣—服务器的配置过程可以先看这里  <a href="http://www.bwcx.wang/ipv6/" target="_blank" rel="external">http://www.bwcx.wang/ipv6/</a></p>
+<p>如果你觉得麻烦，可以与我一起分担服务器的租金！</p>
+<p>如果这样的话：<br>仅仅设置本地客户端即可！（shadowsocks本地设置）</p>
 <hr>
 <h2 id="设置本地客户端"><a href="#设置本地客户端" class="headerlink" title="设置本地客户端"></a>设置本地客户端</h2><h3 id="chrome-浏览器插件"><a href="#chrome-浏览器插件" class="headerlink" title="chrome+浏览器插件"></a>chrome+浏览器插件</h3><ul>
 <li><p>Step1</p>
@@ -256,6 +256,7 @@
 </ul>
 <p>（第一个是数字0第四个是字母o）</p>
 <p>   32bit 链接：<a href="http://pan.baidu.com/s/1ntDV71R" target="_blank" rel="external">http://pan.baidu.com/s/1ntDV71R</a> 密码：hq6z</p>
+<p>如果下载慢的话（请搜索cclean，这是一款电脑清理杀毒软件，绝对比360档次高的多！安装这软件的同时可以附带安装chrome，下载安装贼快） <a href="http://www.piriform.com/ccleaner" target="_blank" rel="external">http://www.piriform.com/ccleaner</a> 选择免费版本即可</p>
 <ul>
 <li><p>Step2</p>
 <ul>
@@ -269,32 +270,36 @@
 </ul>
 <p>将step2下载的crx文件拖动到该页面！不清楚可以<a href="http://chromecj.com/utilities/2014-09/181.html" target="_blank" rel="external">点这里</a></p>
 <p>如果直接拖动chrome没有反应，<a href="http://chenfeicqq.iteye.com/blog/1570164" target="_blank" rel="external">请点击这里</a></p>
-<p>插件安装之后，跳过向导，按下图设置</p>
+<p>插件安装之后，按下图设置</p>
 <ul>
-<li>我们需要新建一个sock5的127.0.0.1的端口1080的代理<br>这样<img src="/images/proxity.jpg" alt="代理"></li>
+<li>我们需要新建一个sock5的127.0.0.1  端口1080的代理  取个容易辨认的name<br>这样<img src="/images/proxity.jpg" alt="代理"></li>
 </ul>
 <ul>
 <li>Step3<br>下载shadowsocks<br><a href="http://pan.baidu.com/s/1pKFNmGF" target="_blank" rel="external">http://pan.baidu.com/s/1pKFNmGF</a></li>
 </ul>
-<p>最好独立设置一个文件夹，第一次打开ss会让你配置账号，然后生成配置文件（已json为扩展名），让配置文件和ss主程序在同一路径下。</p>
-<p><img src="/images/ss1.png" alt="设置1"><br><img src="/images/ss2.png" alt="设置2"></p>
+<p>最好独立设置一个文件夹，第一次打开ss会让你配置账号，然后生成配置文件（以json为扩展名），让配置文件和ss主程序在同一路径下。<br>一定看清楚，不要漏掉任意一步<br><img src="/images/ss1.png" alt="设置1"><br><img src="/images/ss2.png" alt="设置2"></p>
 <p>BUG:  部分系统打开shadowsock系统会报错： shadowsock 已停止工作<br>对策：下载 微软 Microsoft .NET Framework 4.5<br><a href="https://www.microsoft.com/zh-cn/download/details.aspx?id=30653" target="_blank" rel="external">https://www.microsoft.com/zh-cn/download/details.aspx?id=30653</a></p>
-<p>账号内容</p>
+<p>测试账号</p>
 <ul>
 <li>ip地址： [2604:a880:1:20::ec:3001]</li>
 <li>端口：9006</li>
-<li><p>密码：zhixing9000<br>   忽略引号和冒号</p>
-<pre><code>&quot;9006&quot;:&quot;zhixing9000&quot;,
-</code></pre><p>   “9007”:”zhixing9000”,<br>   “9008”:”zhixing9000”,<br>   “9009”:”zhixing9000”,</p>
+<li><p>密码：zhixing9000</p>
+<p>   忽略引号和冒号</p>
+<p>   “9007”:”zhixing9000”,</p>
+<p>   “9008”:”zhixing9000”,</p>
+<p>   “9009”:”zhixing9000”,</p>
 </li>
-<li>加密方式：aes-256-cfb</li>
+<li><p>加密方式：aes-256-cfb</p>
+</li>
 </ul>
 <p>按这样设置，注意ipv6地址的矩形括号<br><img src="/images/6.jpg" alt="设置3"></p>
 <p>（右键小飞机，可以设置开机自启）</p>
 <h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><p>1、然后打开ss（也就是小飞机）</p>
-<p>方法一中：打开chrome，在刚刚设置的插件（右上角）切换到socks代理模式（也就是刚刚设置的127.0.0.1）试试这个网址       www.YouTube.com</p>
-<p>（方法一的效果很流畅，但是只支持chrome内使用，百度云、迅雷设置代理之后也可以使用)</p>
-<p>多人同时使用同一账号会造成比较严重的网络延时，账号不保证长期有效，如有意愿长期使用，还请打赏博<a href="http://www.bwcx.wang/about-me/" target="_blank" rel="external">博主</a></p>
+<p>打开chrome，在刚刚设置的插件（右上角）切换到socks代理模式（也就是刚刚设置的127.0.0.1）试试这个网址       www.YouTube.com</p>
+<p>（目前只支持chrome内使用，百度云、迅雷设置代理之后也可以使用)</p>
+<p>多人同时使用同一账号会造成比较严重的网络延时，账号不保证长期有效，如有意愿长期使用，联系<a href="http://www.bwcx.wang/about-me/" target="_blank" rel="external">博主</a></p>
+<p>合作：分担租金5软妹币一个月/人，独立端口，不限流量（提供设置指导） 多人同时使用更有优惠</p>
+<p>如果想自己独立搭建服务器也可以交流分享我自己搭建过程中遇到的bug</p>
 <h2 id="其他需要注意的问题"><a href="#其他需要注意的问题" class="headerlink" title="其他需要注意的问题"></a>其他需要注意的问题</h2><ul>
 <li>1 请务必确认您的上网环境支持ipv6</li>
 <li>2 目前只支持chrome上网（火狐也支持）其他软件使用代理的方法稍后更新</li>
@@ -310,13 +315,12 @@
 <li><p>使用此方法附带科学上网，也就是google、YouTube等可以自由浏览！</p>
 </li>
 <li><p>如果您的环境不支持iPv6，也可以使用该方法科学上网</p>
-<p>请直接下载shadowsocks也就是step3，忽略关于chrome等的步骤</p>
-<p>在配置账号时，注意ip地址一栏填写 159.203.231.161</p>
-<p>其他内容一致，见图设置3，系统代理模式选择pac模式 </p>
+<p>请直接下载shadowsocks也就是step3，忽略关于chrome的步骤</p>
+<p>在配置账号时，注意ip地址一栏填写 159.203.231.161 </p>
+<p>其他内容一致，见图设置3 </p>
 </li>
 </ul>
-<p>服务器的配置过程可以先看这里  <a href="http://www.bwcx.wang/ipv6/" target="_blank" rel="external">http://www.bwcx.wang/ipv6/</a></p>
-<p>版权声明：此文原创，转载请注明出处</p>
+<p>版权声明：码字不易，转载请注明出处</p>
 
       
     </div>
