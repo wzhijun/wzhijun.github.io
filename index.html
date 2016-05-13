@@ -252,61 +252,14 @@
 </li>
 </ul>
 </blockquote>
-<p>配置ssh登录：<a href="https://www.zxc.so/do-ssh-key.html" target="_blank" rel="external">https://www.zxc.so/do-ssh-key.html</a><br>（强烈推荐安装putty和winscp）</p>
-<hr>
-<p>这些看着办</p>
-<blockquote>
-<ul>
-<li><p>Enable Private Network：用于企业大规模部署内部服务器私有资源；</p>
-</li>
-<li><p>Enable Auto Backups：启用服务器自动备份，对个人用户来说不需要，每月额外收费1美元；</p>
-</li>
-<li><p>Enable DDOS Protection：启用DDOS保护功能，个人用户同样不需要；</p>
-</li>
-<li><p>startup Script：开机自动脚本；适合大规模部署服务器，使用同样的安装脚本，个人用户不需要。</p>
-</li>
-<li><p>Server Label：给你的服务器取名字，随便填啥都无所谓，给自己看的。</p>
-</li>
-</ul>
-</blockquote>
-<p>点击最底部的Deploy，就会自动安装服务器啦！一般五分钟后，你的邮箱就会收到Vultr开通邮件，提醒你服务器安装完成。</p>
-<p>点击后台你搭建的服务器，出现该vps的控制面板：这里你可以找到服务器的ip地址等等</p>
-<p>找到你的ipv6地址和ipv4地址，并备份下来！</p>
-<h2 id="3、配置服务端ss"><a href="#3、配置服务端ss" class="headerlink" title="3、配置服务端ss"></a>3、配置服务端ss</h2><p>1、putty登陆服务器（在这里有教程：<a href="https://www.zxc.so/do-ssh-key.html）" target="_blank" rel="external">https://www.zxc.so/do-ssh-key.html）</a></p>
-<p>2、我们使用秋水逸冰的一键安装脚本，<a href="https://teddysun.com/342.html" target="_blank" rel="external">技术细节看这里</a></p>
-<p>3、root登录vps后<br>输入命令：</p>
-<p>wget –no-check-certificate <a href="https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh" target="_blank" rel="external">https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh</a><br>chmod +x shadowsocks.sh<br>./shadowsocks.sh 2&gt;&amp;1 | tee shadowsocks.log</p>
-<p>ps：直接复制就好，在命令行，右键就是粘贴</p>
-<p>这个过程你就等着就好，按照程序提示就好，偶尔Enter</p>
-<p>最后可能是这样的：（端口和password按照提示去设定）<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Congratulations, shadowsocks install completed!</span><br><span class="line">Your Server IP:your_server_ip</span><br><span class="line">Your Server Port:<span class="number">8989</span></span><br><span class="line">Your Password:your_password</span><br><span class="line">Your Local IP:<span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span></span><br><span class="line">Your Local Port:<span class="number">1080</span></span><br><span class="line">Your Encryption Method:aes<span class="number">-256</span>-cfb</span><br><span class="line"></span><br><span class="line">Welcome to visit:http://teddysun.com/<span class="number">342.</span>html</span><br><span class="line">Enjoy it!</span><br></pre></td></tr></table></figure></p>
-<p>4、适配ipv6<br>为了让ss同时支持ipv4和ipv6，我们做以下更改</p>
-<p>//找到配置文件<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/shadowsocks.json </span><br><span class="line">//这是ss的配置文件</span><br></pre></td></tr></table></figure></p>
-<p>//按i进入编辑模式 将文件内容编辑成如下（此部分可以用Winscp直接修改）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;server&quot;:&quot;::&quot;,</span><br><span class="line">  &quot;server_port&quot;:8989,</span><br><span class="line">  &quot;local_address&quot;:&quot;127.0.0.1&quot;,</span><br><span class="line">  &quot;local_port&quot;:1080,</span><br><span class="line">  &quot;password&quot;:&quot;yourpassword&quot;,</span><br><span class="line">  &quot;timeout&quot;:300,</span><br><span class="line">  &quot;method&quot;:&quot;aes-256-cfb&quot;,</span><br><span class="line">  &quot;fast_open&quot;: false</span><br><span class="line">&#125;</span><br><span class="line">``` </span><br><span class="line">注意：yourpassword是你自己定义的</span><br><span class="line">ctrl+c退出编辑模式</span><br><span class="line">输入 “:x” （英文冒号+x）保存并退出</span><br><span class="line"></span><br><span class="line">//如果要配置多端口支持（多人使用，独立使用端口和密码）</span><br><span class="line">```python</span><br><span class="line">&#123;</span><br><span class="line">    &quot;server&quot;:&quot;0.0.0.0&quot;,</span><br><span class="line">    &quot;local_address&quot;:&quot;127.0.0.1&quot;,</span><br><span class="line">    &quot;local_port&quot;:1080,</span><br><span class="line">    &quot;port_password&quot;:&#123;</span><br><span class="line">         &quot;8989&quot;:&quot;password0&quot;,</span><br><span class="line">         &quot;9001&quot;:&quot;password1&quot;,</span><br><span class="line">         &quot;9002&quot;:&quot;password2&quot;,</span><br><span class="line">         &quot;9003&quot;:&quot;password3&quot;,</span><br><span class="line">         &quot;9004&quot;:&quot;password4&quot;</span><br><span class="line">    &#125;,</span><br><span class="line">    &quot;timeout&quot;:300,</span><br><span class="line">    &quot;method&quot;:&quot;aes-256-cfb&quot;,</span><br><span class="line">    &quot;fast_open&quot;: false</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>端口基本8000以后的随便用</p>
-<blockquote>
-<p>这里使用winscp同步更快</p>
-</blockquote>
-<p>输以下命令重启SS让配置生效<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">/etc/init.d/shadowsocks restart</span><br></pre></td></tr></table></figure></p>
-<p>这里还有其他的命令，备忘：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">启动：/etc/init.d/shadowsocks start</span><br><span class="line"></span><br><span class="line">停止：/etc/init.d/shadowsocks stop</span><br><span class="line"></span><br><span class="line">状态：/etc/init.d/shadowsocks status</span><br><span class="line"></span><br><span class="line">卸载：./shadowsocks.sh uninstall</span><br></pre></td></tr></table></figure></p>
-<p>ps：通过ping命令，发现东京的vps网速更好 200以内的延迟，相对洛杉矶300要很多</p>
-<h2 id="4、配置客户端ss"><a href="#4、配置客户端ss" class="headerlink" title="4、配置客户端ss"></a>4、配置客户端ss</h2><p>具体的过程参考：<a href="http://blog.bwcx.wang/2016/03/24/ipv6/" target="_blank" rel="external">http://blog.bwcx.wang/2016/03/24/ipv6/</a><br>或者出门右转我的另一篇文章：ipv6破解校园网</p>
-<hr>
-<p>Troubeshooting</p>
-<p>1、配置完成，shadowsock配合chrome的插件代理，并不能有效上网<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ss的日志显示：[2016-05-13 09:06:31] System.Net.Sockets.SocketException (0x80004005): 提供了一个无效的参数。</span><br><span class="line">   在 System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)</span><br><span class="line">   在 System.Net.Sockets.Socket.InternalBind(EndPoint localEP)</span><br><span class="line">   在 System.Net.Sockets.Socket.BeginConnectEx(EndPoint remoteEP, Boolean flowContext, AsyncCallback callback, Object state)</span><br><span class="line">   在 System.Net.Sockets.Socket.BeginConnect(EndPoint remoteEP, AsyncCallback callback, Object state)</span><br><span class="line">   在 Shadowsocks.Controller.TCPHandler.StartConnect()</span><br></pre></td></tr></table></figure></p>
-<p>google一圈之后，很可能是系统防火墙的原因，限制了端口</p>
-<p>系统 CentOS 7 x64<br>懒得去查太多的设置，简单粗暴，直接关闭防火墙</p>
-<p>centos 7版本以后默认使用firewalld后，网上关于iptables的设置方法已经不管用<br>官方文档地址：<a href="https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Security_Guide/sec-Using_Firewalls.html#sec-Introduction_to_firewalld" target="_blank" rel="external">https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Security_Guide/sec-Using_Firewalls.html#sec-Introduction_to_firewalld</a></p>
-<p>这里使用到两步：<br>1-安装firewalld  root下执行：</p>
-<pre><code># yum install firewalld firewall-config
-</code></pre><p>2-关闭firewall</p>
-<pre><code># systemctl disable firewalld
- 禁用：# systemctl stop firewalld
-</code></pre><p>可以不用重启<br>enjoy！</p>
-
       
     </div>
     <footer>
       
+        
+          <div class="alignleft">
+            <a href="/2016/05/13/Vltur配置ipv6下的shadowscok/#more" class="more-link">阅读全文</a>
+          </div>
         
         
       

@@ -251,6 +251,7 @@
 </li>
 </ul>
 </blockquote>
+<a id="more"></a>
 <p>配置ssh登录：<a href="https://www.zxc.so/do-ssh-key.html" target="_blank" rel="external">https://www.zxc.so/do-ssh-key.html</a><br>（强烈推荐安装putty和winscp）</p>
 <hr>
 <p>这些看着办</p>
@@ -273,8 +274,7 @@
 <p>找到你的ipv6地址和ipv4地址，并备份下来！</p>
 <h2 id="3、配置服务端ss"><a href="#3、配置服务端ss" class="headerlink" title="3、配置服务端ss"></a>3、配置服务端ss</h2><p>1、putty登陆服务器（在这里有教程：<a href="https://www.zxc.so/do-ssh-key.html）" target="_blank" rel="external">https://www.zxc.so/do-ssh-key.html）</a></p>
 <p>2、我们使用秋水逸冰的一键安装脚本，<a href="https://teddysun.com/342.html" target="_blank" rel="external">技术细节看这里</a></p>
-<p>3、root登录vps后<br>输入命令：</p>
-<p>wget –no-check-certificate <a href="https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh" target="_blank" rel="external">https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh</a><br>chmod +x shadowsocks.sh<br>./shadowsocks.sh 2&gt;&amp;1 | tee shadowsocks.log</p>
+<p>3、root登录vps后<br>输入命令：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh</span><br><span class="line">chmod +x shadowsocks.sh</span><br><span class="line">./shadowsocks.sh <span class="number">2</span>&gt;&amp;<span class="number">1</span> | tee shadowsocks.log</span><br></pre></td></tr></table></figure></p>
 <p>ps：直接复制就好，在命令行，右键就是粘贴</p>
 <p>这个过程你就等着就好，按照程序提示就好，偶尔Enter</p>
 <p>最后可能是这样的：（端口和password按照提示去设定）<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Congratulations, shadowsocks install completed!</span><br><span class="line">Your Server IP:your_server_ip</span><br><span class="line">Your Server Port:<span class="number">8989</span></span><br><span class="line">Your Password:your_password</span><br><span class="line">Your Local IP:<span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span></span><br><span class="line">Your Local Port:<span class="number">1080</span></span><br><span class="line">Your Encryption Method:aes<span class="number">-256</span>-cfb</span><br><span class="line"></span><br><span class="line">Welcome to visit:http://teddysun.com/<span class="number">342.</span>html</span><br><span class="line">Enjoy it!</span><br></pre></td></tr></table></figure></p>
